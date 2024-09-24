@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <title>Sneaker kulmakivi</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="Joonas">
+    
+    <style>
+        /* Mobile-first default styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #header {
+            position: relative;
+            color: white;
+        }
+
+        #header img {
+            width: 100%;
+            height: auto;
+        }
+        
+
+        #header-content {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column; /* Stack items vertically by default */
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        #header-content h1 {
+            margin: 0;
+            font-size: 1.5em; /* Adjust font size for mobile */
+            text-align: center;
+        }
+
+        #header-content .left-buttons,
+        #header-content .right-buttons {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically on mobile */
+            margin-top: 10px;
+        }
+
+       /* Style for links */
+       a {
+            color: white; /* Default link color */
+            text-decoration: none; /* No underline */
+        }
+
+        a:visited {
+            color: white; /* Keeps visited link color same as default */
+        }
+
+        a:hover {
+            color: aquamarine; /* Color on hover */
+            text-decoration: underline; /* Optional: underline on hover */
+        }
+
+        a:active {
+            color: aquamarine; /* Color when clicked */
+        }
+       
+        #header-content button {
+            margin: 5px 0; /* Vertical margin for mobile */
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: rgb(41, 217, 179);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #header-content button:hover {
+            background-color: aquamarine;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Make video responsive */
+        .video-container {
+            position: relative;
+            width: 100%; /* Full width for mobile */
+            padding-bottom: 56.25%; /* Maintain aspect ratio (16:9) */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe, 
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Tablet and desktop styles using media queries */
+        @media (min-width: 768px) {
+            #header-content {
+                flex-direction: row; /* Align items horizontally */
+                justify-content: space-between;
+                padding: 20px;
+            }
+
+            #header-content h1 {
+                font-size: 2em; /* Increase font size for tablets */
+            }
+
+            #header-content .left-buttons,
+            #header-content .right-buttons {
+                flex-direction: row; /* Display buttons in a row */
+            }
+
+            #header-content button {
+                margin: 0 10px; /* Horizontal margin for desktop */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #header-content h1 {
+                font-size: 2.5em; /* Even larger font size for desktop */
+            }
+
+            #header-content button {
+                padding: 15px 30px; /* Larger buttons for desktop */
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <!-- Yeezy heading text -->
+        <h2>Yeezy</h2>
+        
+        <!-- Yeezy images in a row -->
+        <div class="video-container">
+            <video loop autoplay muted>
+                <source src="images/4380323-hd_1080_1920_30fps.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div id="header-content">
+            <!-- Make the Sneaker Kulmakivi title a link -->
+            <a href="index.html"><h1>Sneaker Kulmakivi</h1></a> 
+            <div class="left-buttons">
+                <a href="kengat.html"><button>Kengät</button></a>
+                <a href="oheistuotteet.html"><button>Oheistuotteet</button></a>
+            </div>
+            <div class="right-buttons">
+                <a href="aboutus.html"><button>About us</button></a>
+                <button>Yhteystiedot</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h2>Welcome to Sneaker Kulmakivi</h2>
+        <p>Your one-stop shop for sneakers and streetwear.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <title>Sneaker kulmakivi</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="Joonas">
+    
+    <style>
+        /* Mobile-first default styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #header {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        /* Style for links */
+        a {
+            color: white; /* Default link color */
+            text-decoration: none; /* No underline */
+        }
+
+        a:visited {
+            color: white; /* Keeps visited link color same as default */
+        }
+
+        a:hover {
+            color: aquamarine; /* Color on hover */
+            text-decoration: underline; /* Optional: underline on hover */
+        }
+
+        a:active {
+            color: aquamarine; /* Color when clicked */
+        }
+
+        /* Center the images and display them in a row */
+        .yeezy-container {
+            display: flex;
+            justify-content: center; /* Centers the images horizontally */
+            align-items: center;
+            gap: 20px; /* Adds some space between the images */
+            margin-top: 100px;
+        }
+
+        /* Responsive image styling */
+        .yeezy-container img {
+            width: 100%;
+            max-width: 200px; /* Controls the max size of each image */
+            height: auto;
+        }
+
+        #header-content {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        #header-content h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        #header-content .left-buttons,
+        #header-content .right-buttons {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        #header-content button {
+            margin: 5px 0;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: rgb(41, 217, 179);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #header-content button:hover {
+            background-color: aquamarine;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Tablet and desktop styles using media queries */
+        @media (min-width: 768px) {
+            #header-content {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 20px;
+            }
+
+            #header-content h1 {
+                font-size: 2em;
+            }
+
+            #header-content .left-buttons,
+            #header-content .right-buttons {
+                flex-direction: row;
+            }
+
+            #header-content button {
+                margin: 0 10px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #header-content h1 {
+                font-size: 2.5em;
+            }
+
+            #header-content button {
+                padding: 15px 30px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <!-- Yeezy heading text -->
+        <h2>Yeezy</h2>
+        
+        <!-- Yeezy images in a row -->
+        <div class="yeezy-container">
+            <img src="images/Sneak-Yeezy-Boost-350-V2-_Zebra_-1.png.webp" alt="Zebra">
+            <img src="images/Sneak-Yeezy-Boost-350-V2-Core-Black-Red-1.png.webp" alt="Redstripe">
+            <img src="images/Sneak-adidas-Yeezy-Slide-Onyx-1.png.webp" alt="Slide">
+        </div>
+
+        <div id="header-content">
+            <!-- Make the Sneaker Kulmakivi title a link -->
+            <a href="index.html"><h1>Sneaker Kulmakivi</h1></a> 
+            <div class="left-buttons">
+                <a href="kengat.html"><button>Kengät</button></a>
+                <a href="oheistuotteet.html"><button>Oheistuotteet</button></a>
+            </div>
+            <div class="right-buttons">
+                <a href="aboutus.html"><button>About us</button></a>
+                <button>Yhteystiedot</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h2>Welcome to Sneaker Kulmakivi</h2>
+        <p>Your one-stop shop for sneakers and streetwear.</p>
+    </div>
+</body>
+</html>
